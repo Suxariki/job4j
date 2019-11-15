@@ -19,7 +19,7 @@ public class MaxTest {
 
     @Test
     public void whenEquals() {
-        int result = Max.equals(5,5);
-        assertThat(result, is(5));
+        int result = Max.equals(4,4);
+        assertThat(result, is(4));
     }
 }
