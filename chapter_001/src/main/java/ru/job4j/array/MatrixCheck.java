@@ -9,6 +9,7 @@ public class MatrixCheck {
             if (sign == 'X') {
                 int vertical = 0;
                 int horizon = 0;
+                int winCount = 5;
                 for (int i = 0; i < board.length; i++) {
                     if (board[row][i] == 'X') {
                         horizon++;
@@ -17,13 +18,8 @@ public class MatrixCheck {
                         vertical++;
                     }
                 }
-                if (vertical == 5 || horizon == 5) {
-                    result = true;
+                    result = horizon == winCount || vertical == winCount;
                     return result;
-                } else {
-                    result = false;
-                    return result;
-                }
             }
             System.out.println();
         }
