@@ -58,7 +58,7 @@ public class Tracker {
     public boolean replace(String id, Item item) {
         boolean result = false;
         int i = indexById(id);
-        if (item != null) {
+        if (item != null && i != -1) {
             item.setId(id);
             this.items[i] = item;
             result = true;
@@ -101,7 +101,10 @@ public class Tracker {
 
     public Item findById(String id) {
         int indexResult = indexById(id);
-        return this.items[indexResult];
+        if (indexResult != -1) {
+            return this.items[indexResult];
+        }
+        else return null;
     }
 
     /**
@@ -111,7 +114,7 @@ public class Tracker {
      */
 
     public int indexById(String id) {
-        int index = 0;
+        int index = -1;
         for (int i = 0; i < this.position; i++) {
             if (this.items[i].getId().equals(id)) {
                 index = i;

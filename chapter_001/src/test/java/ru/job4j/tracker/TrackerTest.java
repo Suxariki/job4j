@@ -3,6 +3,7 @@ package ru.job4j.tracker;
 import org.junit.Assert;
 import org.junit.Test;
 import static org.hamcrest.Matchers.is;
+import static org.hamcrest.Matchers.nullValue;
 import static org.junit.Assert.assertThat;
 
 public class TrackerTest {
@@ -79,5 +80,16 @@ public class TrackerTest {
         tracker.add(third);
         String out = second.getId();
         assertThat(tracker.findById(out), is(second));
+    }
+
+    @Test
+    public void findByIdTestNull() {
+        Tracker tracker = new Tracker();
+        Item first = new Item ("1");
+        Item second = new Item ("2");
+        tracker.add(first);
+        tracker.add(second);
+        String out = "123";
+        assertThat(tracker.findById(out), is (nullValue()));
     }
 }
