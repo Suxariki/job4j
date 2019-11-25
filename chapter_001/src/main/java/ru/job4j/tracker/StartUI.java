@@ -21,7 +21,7 @@ public class StartUI implements Input {
         }
     }
 
-    public static void editItem(Input input, Tracker tracker) {
+    public static void replaceItem(Input input, Tracker tracker) {
         System.out.println("=== Edit item ===");
         System.out.println("Enter id to find: ");
         String id = input.askStr("");
@@ -74,7 +74,7 @@ public class StartUI implements Input {
             } else if (select == 1) {
                 showAllItems(tracker);
             } else if (select == 2) {
-                editItem(input, tracker);
+                replaceItem(input, tracker);
             }
             else if (select == 3) {
                 deleteItem(input, tracker);
