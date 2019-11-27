@@ -13,6 +13,6 @@ public class ReplaceAction implements UserAction{
         Item item = new Item(name);
         boolean result = tracker.replace(id, item);
         System.out.println(result ? "Заявка заменена" : "Заявка не заменена");
-        return result;
+        return true;
     }
 }
