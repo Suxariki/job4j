@@ -25,10 +25,10 @@ public class PaintTest {
                 new String(out.toByteArray()),
                 is(
                         new StringBuilder()
-                                .append("++++")
-                                .append("+     +")
-                                .append("+     +")
-                                .append("++++")
+                                .append(" ++++\n")
+                                .append("+     +\n")
+                                .append("+     +\n")
+                                .append(" ++++")
                                 .append(System.lineSeparator())
                                 .toString()
                 )
@@ -47,8 +47,8 @@ public class PaintTest {
                 new String(out.toByteArray()),
                 is(
                         new StringBuilder()
-                                .append("  X  ")
-                                .append(" XXX ")
+                                .append("  X  \n")
+                                .append(" XXX \n")
                                 .append("XXXXX")
                                 .append(System.lineSeparator())
                                 .toString()

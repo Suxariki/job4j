@@ -12,8 +12,8 @@ public class TriangleTest {
                 triangle.draw(),
                 is(
                         new StringBuilder()
-                                .append("  X  ")
-                                .append(" XXX ")
+                                .append("  X  \n")
+                                .append(" XXX \n")
                                 .append("XXXXX")
                                 .toString()
                 )
