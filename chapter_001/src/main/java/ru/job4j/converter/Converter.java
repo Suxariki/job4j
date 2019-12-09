@@ -7,16 +7,16 @@ public class Converter {
     }
 
     public static int rubleToDollar(int value) {
-        return value/60;
+        return value / 60;
     }
 
-    public static int dollarToRuble (int value) {
+    public static int dollarToRuble(int value) {
 
-        return value*60;
+        return value * 60;
     }
 
     public static int euroToRuble(int value) {
-        return value*70;
+        return value * 70;
     }
 
     public static void main(String[] args) {

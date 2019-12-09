@@ -16,7 +16,9 @@ public class FindItemNameAction implements UserAction {
                 System.out.println("Имя заявки: " + item.getName() + " ID заявки: " + item.getId());
 
             }
-        } else System.out.println("Заявки не найдены");
+        } else {
+            System.out.println("Заявки не найдены");
+        }
         return true;
     }
 

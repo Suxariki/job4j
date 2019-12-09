@@ -12,7 +12,7 @@ public class Surgeon extends Doctor {
         return this.isHandsWashed;
     }
 
-    public void doSurgery(){
+    public void doSurgery() {
 
     }
 }

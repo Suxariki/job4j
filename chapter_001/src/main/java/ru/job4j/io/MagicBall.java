@@ -11,10 +11,10 @@ public class MagicBall {
         int random = new Random().nextInt(3);
         if (random == 0) {
             System.out.println("Да");
-        }
-        else if (random == 2) {
+        } else if (random == 2) {
             System.out.println("Нет");
+        } else  {
+            System.out.println("Не знаю");
         }
-        else System.out.println("Не знаю");
     }
 }

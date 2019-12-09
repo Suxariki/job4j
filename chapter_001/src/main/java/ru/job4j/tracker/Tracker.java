@@ -39,8 +39,8 @@ public class Tracker {
         for (int i = 0; i < this.position; i++) {
             if (this.items[i] != null && this.items[i].getId().equals(id)) {
                 this.items[i] = null;
-                this.position --;
-                System.arraycopy(this.items,i + 1, this.items, i, this.items.length - i - 1);
+                this.position--;
+                System.arraycopy(this.items, i + 1, this.items, i, this.items.length - i - 1);
                 result = true;
                 break;
             }
@@ -103,8 +103,9 @@ public class Tracker {
         int indexResult = indexById(id);
         if (indexResult != -1) {
             return this.items[indexResult];
+        } else {
+            return null;
         }
-        else return null;
     }
 
     /**

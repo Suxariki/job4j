@@ -1,6 +1,6 @@
 package ru.job4j.tracker;
 
-public class ShowItemsAction implements UserAction{
+public class ShowItemsAction implements UserAction {
     @Override
     public String name() {
         return "=== Show all items ===";
@@ -13,8 +13,7 @@ public class ShowItemsAction implements UserAction{
                 System.out.println("Id заявки: " + item.getId() + " Имя заявки: " + item.getName());
 
             }
-        }
-        else {
+        } else {
             System.out.println("Заявок не найдено");
         }
         return true;

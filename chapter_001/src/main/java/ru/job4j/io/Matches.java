@@ -13,32 +13,29 @@ public class Matches {
             if ((take > 0) & (take < 4) & (take <= matches)) {
                 turn = true;
                 matches -= take;
-                System.out.println("Осталось "+ matches + " спичек");
-            }
-            else {
+                System.out.println("Осталось " + matches + " спичек");
+            } else {
                 System.out.println("Возьмите 1-3 спички");
                 continue;
             }
-            if(matches == 0) {
+            if (matches == 0) {
                 break;
+            } else {
+                System.out.println("Второй игрок возьмите 1-3 спички");
+                int take1 = Integer.parseInt(in.nextLine());
+                if ((take1 > 0) & (take1 < 4) & (take1 <= matches)) {
+                    turn = false;
+                    matches -= take1;
+                    System.out.println("Осталось " + matches + " спичек");
+                } else {
+                    System.out.println("Возьмите 1-3 спички");
+                }
             }
-            else
-            System.out.println("Второй игрок возьмите 1-3 спички");
-            int take1 = Integer.parseInt(in.nextLine());
-            if ((take1 > 0) & (take1 < 4) & (take1 <= matches)) {
-                turn = false;
-                matches -= take1;
-                System.out.println("Осталось "+ matches + " спичек");
+            if (turn) {
+                System.out.println("Первый игрок победил");
+            } else {
+                System.out.println("Второй игрок победил");
             }
-            else {
-                System.out.println("Возьмите 1-3 спички");
-            }
-        }
-        if (turn) {
-            System.out.println("Первый игрок победил");
-        }
-        else  {
-            System.out.println("Второй игрок победил");
         }
     }
 }

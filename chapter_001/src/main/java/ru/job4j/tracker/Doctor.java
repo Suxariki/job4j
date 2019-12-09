@@ -12,7 +12,4 @@ public class Doctor extends Profession {
         return this.clinic;
     }
 
-    public void Diagnose(){
-
-    }
 }
